@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This project implements an **8-bit barrel shifter** in **Verilog**, supporting **logical and arithmetic shifts**. It is a **mux-based design** and uses **parameterization** for variable input length.
+This project implements an 8-bit barrel shifter in Verilog using ModelSim, supporting logical and arithmetic shifts. It is a mux-based design and uses parameterization for variable input length.
 
 A barrel shifter is a digital circuit used in computer processors to efficiently perform bitwise shifting operations on binary data, either left or right by a specified number of positions.
 
