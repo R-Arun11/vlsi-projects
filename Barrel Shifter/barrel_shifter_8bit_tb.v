@@ -5,7 +5,6 @@ module barrel_shifter_8bit_tb;
     reg  [1:0] mode;
     wire [7:0] data_out;
 
-    // Instantiate DUT
     barrel_shifter_8bit uut (
         .data_in(data_in),
         .smt(smt),
@@ -13,7 +12,6 @@ module barrel_shifter_8bit_tb;
         .data_out(data_out)
     );
 
-    // Task to display results
     task show;
         input [7:0] din;
         input [2:0] sa;
@@ -27,9 +25,6 @@ module barrel_shifter_8bit_tb;
 
     integer i;
     initial begin
-        // Waveform dump for ModelSim/GTKWave
-        $dumpfile("barrel_shifter_8bit.vcd");
-        $dumpvars(0, barrel_shifter_8bit_tb);
 
         // -------- Directed tests --------
         data_in = 8'b10101010; smt = 3; mode = 2'b00; #10; show(data_in, smt, mode, data_out);
@@ -39,9 +34,9 @@ module barrel_shifter_8bit_tb;
 
         // -------- Randomized tests --------
         for (i = 0; i < 10; i = i + 1) begin
-            data_in = $random & 8'hFF;   // safe 8-bit random
-            smt     = $random & 3'b111;  // safe 3-bit random (0-7)
-            mode    = $random & 2'b11;   // safe 2-bit random (0-3)
+            data_in = $random & 8'hFF;   // 8-bit random
+            smt     = $random & 3'b111;  // 3-bit random (0-7)
+            mode    = $random & 2'b11;   // 2-bit random (0-3)
             #10;
             show(data_in, smt, mode, data_out);
         end
