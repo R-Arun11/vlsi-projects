@@ -48,7 +48,7 @@ Time=140 | data_in=10111101 | smt=5 | mode=01 (1) | data_out=00000101 <br>
 
 **Waveform Output:**
 
-![Waveform Screenshot](images/BSopwave.png)
+![Waveform Screenshot](BSopwave.png)
 
 ---
 
