@@ -1,31 +1,48 @@
-# 4×4 Pipelined Wallace Tree Multiplier
+# 4×4 MAC using Pipelined Wallace Tree Multiplier
 
 ## Project Overview
 
-This project implements a 4-bit by 4-bit Wallace Tree Multiplier using Verilog HDL. The design features a Full Adder and Half Adder based Wallace reduction stage, followed by a Carry Lookahead Adder (CLA) for the final addition. The multiplier is pipelined for improved performance at the cost of latency. The project was simulated and verified using ModelSim.
+This project implements a 4-bit by 4-bit Multiply-Accumulate (MAC) unit in Verilog HDL. The design uses a 3-stage pipelined Wallace Tree Multiplier for fast multiplication, followed by a 16-bit accumulator that sums the results of sequential multiplications. The multiplier employs Full Adder and Half Adder based Wallace reduction, and uses a Carry Lookahead Adder (CLA) for the final addition stage.
 
-The Wallace Tree architecture is well known for its high speed multiplication, especially suitable for digital signal processing (DSP) and arithmetic heavy applications.
+The pipelined MAC is particularly suitable for DSP and signal processing applications where multiple products need to be accumulated efficiently. The design is tested and verified using ModelSim.
 
 ---
 
 ## Features
 
 - **Inputs:**  
-  - `a [3:0]`: 4-bit multiplicand  
-  - `b [3:0]`: 4-bit multiplier  
+  - `a [3:0]` – 4-bit multiplicand  
+  - `b [3:0]` – 4-bit multiplier  
+  - `clk` – System clock  
+  - `rst` – Synchronous reset  
+  - `en` – Enable signal to trigger a multiply-accumulate operation
 
 - **Output:**  
-  - `prod [7:0]`: 8-bit product  
+  - `mac_out [15:0]` – 16-bit accumulated result
 
-- **Design Highlights:**  
-  - Full Adder and Half Adder based product reduction  
-  - Final stage 8-bit CLA  
-  - Three stage pipelined architecture   
-  - Fully synthesized and simulated in ModelSim
+- **Uses a three stage pipelined Wallace Tree Multiplier**
+- **MAC result is aligned using a 3-cycle delayed enable signal**
+- **Fully tested and simulated in ModelSim**
 
 ---
 
 ## Output
 
-### ✅ **Console Output (Simulation)**
+**Console Output:**
 
+Expected MAC result: 30
+Actual MAC result: 30
+MAC test PASSED
+
+**Waveform Output:**
+
+![Waveform Screenshot](MACopwave.png)
+
+---
+
+## Contents
+
+- `mac_4x4.v` – Verilog RTL code for the 4x4 MAC unit  
+- `mac_4x4_tb.v` – Verilog testbench for the MAC unit  
+- `MACopwave.png` – Simulation waveform showing MAC behavior  
+- `README.md` – This file
