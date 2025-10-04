@@ -46,3 +46,4 @@ MAC test PASSED
 - `mac_4x4_tb.v` – Verilog testbench for the MAC unit  
 - `MACopwave.png` – Simulation waveform showing MAC behavior  
 - `README.md` – This file
+- `Multiplier` – Folder containing the files for the Wallace Tree Multiplier
