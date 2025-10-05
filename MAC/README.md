@@ -30,9 +30,9 @@ The pipelined MAC is particularly suitable for DSP and signal processing applica
 
 **Console Output:**
 
-Expected MAC result: 30
-Actual MAC result: 30
-MAC test PASSED
+`Expected MAC result: 30` <br>
+`Actual MAC result: 30` <br>
+`MAC test PASSED` 
 
 **Waveform Output:**
 
