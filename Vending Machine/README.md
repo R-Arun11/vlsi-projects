@@ -45,14 +45,6 @@ The vending machine supports three products (`A`, `B`, and `C`) with different p
 
 ---
 
-## Diagrams
-
-Visualization to understand architecture and logic flow.
-
-![FSM State Diagram](VM_FSM.png)
-
----
-
 ## Output
 
 **Console Output:**
@@ -67,7 +59,6 @@ Visualization to understand architecture and logic flow.
 
 - `vending_machine.v` – Verilog RTL code of the vending machine  
 - `vending_machine_tb.v` – Verilog testbench simulating different use cases  
-- `VM_FSM.png` – FSM state diagram  
 - `VMopwave.png` – Screenshot of waveform output from ModelSim  
 - `README.md` – This file
 
