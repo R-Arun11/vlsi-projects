@@ -8,7 +8,7 @@ The Verilog RTL design is simulated using ModelSim, then synthesized and physica
 
 This pipelined MAC architecture is well-suited for DSP applications requiring repeated high-speed multiply-accumulate operations.
 
-The complete flow is available in a Google Colab Notebook for free and can be run in any browser in Librelane's Github Repository ([Librelane](https://github.com/librelane/librelane)).
+The complete flow is available in a Google Colab Notebook for free and can be run in any browser in Librelane's GitHub Repository ([Librelane](https://github.com/librelane/librelane)).
 
 ---
 
