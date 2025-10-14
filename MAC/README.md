@@ -1,4 +1,4 @@
-# 4×4 MAC using Pipelined Wallace Tree Multiplier
+# 4×4 MAC Unit using Pipelined Wallace Tree Multiplier
 
 ## Project Overview
 
